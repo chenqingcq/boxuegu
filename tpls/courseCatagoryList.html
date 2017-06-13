@@ -1,0 +1,41 @@
+<!--路径导航-->
+<ol class="breadcrumb pull-left" style="width:100%;height:50px;padding:0;display:flex;align-items:center">
+    <li><a href="#" style="display:block;height:50px">课程分类</a></li>
+    <li style="display:block; height:50px" class="active">课程列表</li>
+    <!--模态-->
+    <button type="button" class="btn btn-success pull-right col-sm-offset-10" id='courseCatagoryAdd'>添加</button>
+</ol>
+<table class="table table-bordered">
+    <!-- On cells (`td` or `th`) -->
+    <tr>
+        <th class="active text-center">课程</th>
+        <th class="active text-center">页码</th>
+        <th class="active text-center">是否显示</th>
+        <th class="active text-center">cg_id</th>
+        <th class="active text-center">排序</th>
+        <th class="active text-center">操作</th>
+    </tr>
+    {{each result as value index}} {{if (value.cg_pid == 0)}}
+    <tr>
+        <td class="active text-center" style="text-align:left">|--{{value.cg_name}}</td>
+        <td class="active text-center">{{value.cg_pid}}</td>
+        <td class="active text-center">{{value.cg_is_hide}}</td>
+        <td class="active text-center">{{value.cg_id}}</td>
+        <td class="active text-center">{{value.cg_order}}</td>
+        <td class="active text-center" cg_id="{{value.cg_id}}">
+            <button type="button" class="btn btn-success"> 编辑</button>
+        </td>
+    </tr>
+    {{each result as valueAgain newIndex}}{{if (valueAgain.cg_pid==value.cg_id)}}
+    <tr>
+        <td class="text-center" style="text-align:left">||--{{valueAgain.cg_name}}</td>
+        <td class="success text-center">{{valueAgain.cg_pid}}</td>
+        <td class="success text-center">{{valueAgain.cg_is_hide}}</td>
+        <td class="success text-center">{{valueAgain.cg_id}}</td>
+        <td class="success text-center">{{valueAgain.cg_order}}</td>
+        <td class="success text-center" cg_id="{{valueAgain.cg_id}}">
+            <button type="button" class="btn btn-info ">操作</button>
+        </td>
+    </tr>
+    {{/if}} {{/each}} {{/if}} {{/each}}
+</table>

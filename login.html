@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>博学谷</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="content-container">
+        <h3 class="text-center">博学谷管理系统</h3>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">用户名：</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" name="tc_name" placeholder="请输入你的用户名.." value="前端学院">
+                </div>
+                <label class="col-sm-2 control-label"></label>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">密码：</label>
+                <div class="col-sm-8">
+                    <input type="password" class="form-control" name='tc_pass' value="123456" placeholder="请输入密码.." >
+                </div>
+                <label class="col-sm-2 control-label"></label>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <button type="submit" class="btn btn-success col-sm-12 ">登陆</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/lib/jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="js/lib/jquery.cookie.js"></script>
+    <script type='text/javascript' src="js/common/login.js">
+    </script>
+
+</body>
+
+</html>

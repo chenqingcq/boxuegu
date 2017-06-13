@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>博学谷</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="content">
+        <div class="left">
+            <div class="img-container">
+                <img src="img/logo.jpg" class="img-circle" alt="Responsive image" id="userImg">
+            </div>
+            <div class="userName text-center">小鱼儿</div>
+            <div class="list-group menu">
+                <button type="button" class="list-group-item" id="teacherManager">讲师管理</button>
+                <button type="button" class="list-group-item" id="courseCatagory">课程分类</button>
+                <button type="button" class="list-group-item" id="courseList">&nbsp&gt课程列表</button>
+                <button type="button" class="list-group-item" id="courseTime">&nbsp&gt课时管理</button>
+                <button type="button" class="list-group-item" id="chartManager">图表统计</button>
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="panel panel-default" id="left-panel">
+                <div class="panel-body">
+                    <div class="dropdown" id="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                            <span class="glyphicon glyphicon-list" aria-hidden="true" style="color:red"></span>    
+                             <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">讲师管理</a></li>
+                            <li><a href="#">课程列表</a></li>
+                            <li><a href="#">课时管理</a></li>
+                            <li><a href="#">图表统计</a></li>
+                            <li><a href="#">其他事项</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="login">
+                    <a href="javascript:void(0)">个人中心</a>
+                    <a href="javascript:void(0)">退出</a>
+                </div>
+            </div>
+            <h3 class="text-center course">前端课程</h3>
+            <div id="catagory-container"></div>
+            <!--路径导航-->
+            <template>
+                <ol class="breadcrumb">
+                    <li><a href="#">课程导航</a></li>
+                    <li><a href="#">课程列表</a></li>
+                    <li class="active">教师名单</li>
+                </ol>
+                <table class="table table-bordered">
+                    <!-- On cells (`td` or `th`) -->
+                    <tr>
+                        <th class="active text-center">姓名</th>
+                        <th class="active text-center">电话</th>
+                        <th class="active text-center">邮箱</th>
+                        <th class="active text-center">生日</th>
+                        <th class="active text-center">加入日期</th>
+                        <th class="active text-center">操作</th>
+                    </tr>
+                    <tr>
+                        <td class="active text-center">Jack</td>
+                        <td class="active text-center">1567897777</td>
+                        <td class="active text-center">76400@qq.com</td>
+                        <td class="active text-center">1987-21-3</td>
+                        <td class="active text-center">2001-21-3</td>
+                        <td class="active text-center">
+                            <!--modal按钮-->
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal1">
+                         删除
+                         </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">列表1</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            模态1
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                            <button type="button" class="btn btn-primary">删除</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="active text-center">Rose</td>
+                        <td class="active text-center">1567897777</td>
+                        <td class="active text-center">76400@qq.com</td>
+                        <td class="active text-center">1987-21-3</td>
+                        <td class="active text-center">2001-21-3</td>
+                        <td class="active text-center">
+                            <!--modal按钮-->
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal2">
+                         删除
+                         </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">列表2</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            模态2
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                            <button type="button" class="btn btn-primary">删除</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="active text-center">Putin</td>
+                        <td class="active text-center">1567897777</td>
+                        <td class="active text-center">76400@qq.com</td>
+                        <td class="active text-center">1987-21-3</td>
+                        <td class="active text-center">2001-21-3</td>
+                        <td class="active text-center">
+                            <!--modal按钮-->
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal3">
+                         删除
+                         </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">列表3</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            模态3
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                            <button type="button" class="btn btn-primary">删除</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </template>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/lib/jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/lib/require.js" main-data: 'main'></script>
+    <script>
+        require(['main'], function () {})
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+    <h3 class="panel-heading">基本信息</h3>
+    <div class="panel-body">
+        <div>课程名称：{{result.result.cs_name}}</div>
+        <div>讲师：{{result.result.tc_name}}</div>
+        <hr>
+        <div>图片：<img src='{{result.result.cs_cover}}' style="width:100px"></div>
+    </div>
+</div>
+<table class="table table-bordered">
+    <tr>
+        <th class="success">序号</th>
+        <th class="success">名称</th>
+        <th class="success">时长</th>
+        <th class="success">
+            操作
+        </th>
+    </tr>
+    {{each result.result.lessons as value}}
+    <tr ct_id={{value.ct_id}}>
+        <td class="success" >{{value.ct_id}}</td>
+        <td class="success">{{value.ct_name}}</td>
+        <td class="success">{{value.ct_video_duration}}</td>
+        <td class="success">
+            <button class="btn btn-success">编辑</button>
+        </td>
+    </tr>
+    {{/each}}
+</table>

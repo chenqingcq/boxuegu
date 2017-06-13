@@ -1,0 +1,18 @@
+<ul class="list-group" id="courseListTpl">  
+    {{each result as value index}}
+    <li class="list-group-item">
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+      <img class="media-object" src="{{value.cs_cover}}" style="width:80px;height:80px" alt="{{value.cs_name}}"></a>
+            </div>
+            <div class="media-body col-sm-offset-4" cs_id="{{value.cs_id}}">
+                <h4 class="media-heading">{{value.cg_name}}</h4>
+                <button class="btn btn-success">编辑课时</button>
+                <p>----讲师：{{value.tc_name}}</p>
+                <p>----分类：{{value.cs_name}}</p>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ul>
